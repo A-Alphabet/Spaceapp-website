@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="Space Apps - Modern Tech Solutions">
-    <meta name="theme-color" content="#667eea">
+    <meta name="theme-color" content="#0ea5e9">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="format-detection" content="telephone=no">
     <meta name="mobile-web-app-capable" content="yes">
     <title>Space Apps - Modern Tech Solutions</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="dark.css">
     <link rel="icon" href="favicon.ico">
@@ -21,13 +20,21 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <svg width="32" height="32" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="2.5" fill="none"/>
-                    <ellipse cx="20" cy="20" rx="13" ry="4" stroke="currentColor" stroke-width="2"/>
-                    <circle cx="27" cy="15" r="1.5" fill="currentColor"/>
-                    <circle cx="15" cy="25" r="1.2" fill="currentColor"/>
-                </svg>
-                <span>Space Apps</span>
+                <div class="logo-icon">
+                    <svg width="36" height="36" viewBox="0 0 40 40" fill="none">
+                        <circle cx="20" cy="20" r="18" fill="url(#gradient1)"/>
+                        <circle cx="20" cy="20" r="12" fill="none" stroke="white" stroke-width="2" opacity="0.6"/>
+                        <circle cx="26" cy="14" r="2" fill="white"/>
+                        <circle cx="14" cy="26" r="1.5" fill="white" opacity="0.8"/>
+                        <defs>
+                            <linearGradient id="gradient1" x1="0" y1="0" x2="40" y2="40">
+                                <stop offset="0%" stop-color="#0ea5e9"/>
+                                <stop offset="100%" stop-color="#06b6d4"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <span class="logo-text">Space Apps</span>
             </div>
             <button class="nav-hamburger" aria-label="Open menu">
                 <span></span>
@@ -36,22 +43,24 @@
             </button>
             <div class="nav-links">
                 <a href="#home" class="nav-link" data-section="home">Home</a>
-                <a href="#about-syncspace" class="nav-link" data-section="about-syncspace">SyncSpace</a>
-                <a href="#about-studyspace" class="nav-link" data-section="about-studyspace">StudySpace</a>
+                <a href="#about-syncspace" class="nav-link" data-section="about-syncspace">Apps</a>
+                <a href="#upcoming-projects" class="nav-link" data-section="upcoming-projects">Upcoming</a>
                 <a href="https://status.spaceapp.rf.gd/" class="nav-link" target="_blank">Status</a>
             </div>
-            <button id="dark-mode-toggle" aria-label="Toggle dark mode">
-                <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"></path></svg>
-                <svg class="cs-sun" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="orange" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="5"/>
-                  <line x1="12" y1="1" x2="12" y2="3"/>
-                  <line x1="12" y1="21" x2="12" y2="23"/>
-                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-                  <line x1="1" y1="12" x2="3" y2="12"/>
-                  <line x1="21" y1="12" x2="23" y2="12"/>
-                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            <button id="dark-mode-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <svg class="cs-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
                 </svg>
             </button>
         </div>
@@ -63,15 +72,44 @@
         <section id="home" class="page-section active">
             <!-- Hero Section -->
             <div class="hero-section">
+                <div class="hero-background">
+                    <div class="gradient-orb orb-1"></div>
+                    <div class="gradient-orb orb-2"></div>
+                    <div class="grid-pattern"></div>
+                </div>
                 <div class="hero-content">
-                    <h1 class="hero-title">Empowering your digital journey</h1>
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        <span>Modern Tech Solutions</span>
+                    </div>
+                    <h1 class="hero-title">Transform Your Digital Experience</h1>
                     <p class="hero-subtitle">
-                        Join the millions of users that use Space Apps to connect, learn, and build amazing experiences. 
-                        Modern solutions for modern problems.
+                        Powerful tools designed for students and creators. Connect, learn, and grow with our suite of modern applications.
                     </p>
                     <div class="hero-actions">
-                        <button id="start-now-btn" class="btn btn-primary">Start now</button>
-                        <a href="#upcoming-projects" class="btn btn-secondary">Upcoming Projects</a>
+                        <button id="start-now-btn" class="btn btn-primary">
+                            <span>Explore Apps</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                        <a href="#upcoming-projects" class="btn btn-secondary">What's Coming</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">2+</div>
+                            <div class="stat-label">Apps</div>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <div class="stat-value">100%</div>
+                            <div class="stat-label">Free</div>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <div class="stat-value">24/7</div>
+                            <div class="stat-label">Available</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -79,8 +117,9 @@
             <!-- Products Section -->
             <div class="products-section">
                 <div class="section-header">
-                    <h2>A fully integrated suite of modern tech solutions</h2>
-                    <p>Reduce complexity, grow engagement, and run your digital life more efficiently with our integrated, AI-powered platform.</p>
+                    <span class="section-tag">OUR PRODUCTS</span>
+                    <h2>Apps Built for Modern Life</h2>
+                    <p>Powerful, intuitive tools designed to help you connect, learn, and manage your digital world seamlessly.</p>
                 </div>
 
                 <div class="products-grid">
